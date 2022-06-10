@@ -1,7 +1,8 @@
 import './index.css';
 
-import { Box, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 
+import Links from '../../Links';
 import LaptopCodeIcon from '../LaptopCodeIcon';
 
 const AppHeader = () => {
@@ -13,7 +14,14 @@ const AppHeader = () => {
       </Typography>
       <Box sx={{ marginTop: 1 }}>
         <Typography variant="subtitle1">
-          Software Engineer. Technical Co-Founder
+          Technical Co-Founder @{' '}
+          <Link
+            href={Links.RATE_WEBSITE}
+            color="inherit"
+            target="_blank"
+            rel="noopener">
+            RateS
+          </Link>
         </Typography>
       </Box>
     </div>

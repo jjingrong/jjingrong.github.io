@@ -1,5 +1,12 @@
 .About-Me-Container {
   /* background-color: #; */
   /* color: white; */
-  padding: 48px
-}  
+  padding: 48px;
+  /* text-align: left; */
+}
+.technology-icon {
+  color: #868e96
+}
+.technology-icon:hover {
+  color: #645beb
+}
