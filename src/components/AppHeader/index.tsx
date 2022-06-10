@@ -1,3 +1,5 @@
+import './index.css';
+
 import { Box, Typography } from '@mui/material';
 
 import LaptopCodeIcon from '../LaptopCodeIcon';
