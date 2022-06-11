@@ -14,14 +14,15 @@ const FaceCard = () => {
     () => (
       <Box
         component="ol"
-        justifyContent="space-between"
+        justifyContent="space-around"
         flexWrap={'wrap'}
         display={'flex'}
-        padding={0}>
+        padding={0}
+        marginBottom={0}>
         {Favorites.map(({ name, icon }) => (
           <Box
             component="li"
-            marginX={1}
+            margin={1}
             // className="technology-icon"
             sx={{ display: 'inline-flex' }}
             flexDirection="column"

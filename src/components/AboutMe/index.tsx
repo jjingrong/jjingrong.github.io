@@ -60,11 +60,15 @@ const AboutMe = () => {
         <Typography variant="h3" component="h2" gutterBottom marginBottom={4}>
           About me
         </Typography>
-        <Grid container justifyContent="center" rowSpacing={1}>
+        <Grid
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+          rowSpacing={8}
+          columnSpacing={12}>
           <Grid item lg={4} justifyContent="center" alignItems="center">
-            <Grid item xs={10} justifyContent="center" alignItems="center">
-              <FaceCard />
-            </Grid>
+            <FaceCard />
           </Grid>
           <Grid
             item
@@ -73,7 +77,7 @@ const AboutMe = () => {
             alignItems="center"
             textAlign={'left'}>
             <Box>
-              <Typography variant="h5" component="h3" marginY={2}>
+              <Typography variant="h5" component="h3" marginBottom={2}>
                 Hi 👋
               </Typography>
               <Typography variant="body1" color="#868e96">
