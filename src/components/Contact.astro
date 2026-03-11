@@ -1,0 +1,51 @@
+---
+import Socials from './Socials.astro';
+---
+
+<div>
+
+    <!-- Start: Terminal (Claude Code style) -->
+    <div class="mt-6 bg-black rounded-lg border border-gray-600 text-xs overflow-hidden">
+
+        <!-- Title bar -->
+        <div class="flex items-center gap-1.5 px-3 py-1.5 border-b border-gray-700 bg-gray-900/50">
+            <span class="w-2.5 h-2.5 rounded-full bg-red-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-yellow-500/80"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-green-500/80"></span>
+            <span class="text-gray-500 ml-2">~/jingrong</span>
+        </div>
+
+        <div class="p-3 space-y-2">
+
+            <!-- User prompt -->
+            <div class="flex items-start gap-2">
+                <span class="text-primary font-bold shrink-0">&gt;</span>
+                <span class="text-gray-100">Tell me about Jing Rong</span>
+            </div>
+
+            <!-- Thinking indicator -->
+            <div class="flex items-center gap-1.5 text-gray-500 pl-5">
+                <span class="thinking-dot animate-pulse">●</span>
+                <span>Schlepping...</span>
+            </div>
+
+            <!-- Response -->
+            <div class="pl-5 text-gray-400 border-l-2 border-primary/30 ml-0.5">
+                Builder who ships fast and fails fast.
+                <br />
+                <i>(Good swe but maybe not a good boat builder)</i>
+                <br />
+                <br />
+                Find me on the links below!
+            </div>
+
+        </div>
+
+    </div>
+    <!-- End: Terminal -->
+
+    <!-- Start: Social Links -->
+    <Socials />
+    <!-- End: Social Links -->
+
+</div>

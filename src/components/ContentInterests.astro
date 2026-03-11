@@ -1,0 +1,95 @@
+---
+interface Interest {
+    title: string;
+    emoji: string;
+    description: string;
+    backstory?: string;
+    details?: string[];
+};
+
+const interests: Interest[] = [{
+    title: 'Fitness',
+    emoji: '\uD83C\uDFCB\uFE0F',
+    description: 'HIIT and strength training',
+    backstory: 'Did Hyrox Singles (i.e. suffered) in June 2025.',
+    details: [
+        'Metamorfitus',
+        '24/7 Fitness',
+        'BFT Bukit Timah (on pause)'
+    ]
+}, {
+    title: 'Food',
+    emoji: '\uD83C\uDF5C',
+    description: 'The way to live',
+    details: [
+        'Comfort food: Fried Rice and soup',
+        'Fast food: McSpicy, fries with Chick-fil-A sauce',
+        'Favorite asian dish: Sweet & Sour Pork',
+        'Hawker food: \u767D\u9E21\u817F\u996D\uFF0C\u52A0\u86CB',
+        'Favorite beverage: Coke Zero'
+    ]
+}, {
+    title: 'Coffee',
+    emoji: '\u2615',
+    description: 'Morning Machine: Experimenting',
+    backstory: 'Bought the Tanchen x Morning Machine in Lilac on a whim, after my kid turned 1 month. I figured if I was going to be sleep deprived, might as well upgrade from my Nespresso setup.',
+    details: [
+        'Current setup: Morning Machine (Lilac)',
+        'Previously: Nespresso',
+        'Mission: Try every pod worth trying'
+    ]
+}, {
+    title: 'Keyboards',
+    emoji: '\u2328\uFE0F',
+    description: 'The rabbit hole that never ends.',
+    details: [
+        'Started with: Rosewill 100% (Red switches)',
+        'Then: Ducky One V2 TKL (Brown switches)',
+        'Daily driver: WOBKEY Zen65',
+        'Slim profile: Keychron K3',
+        'Gaming: Wooting 60HE'
+    ]
+}];
+---
+
+<div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        {interests.map(interest => (
+
+            <div class="border border-gray-700 rounded-lg p-5 bg-black">
+
+                <div class="flex items-center gap-2 mb-3">
+                    <span class="text-xl">{interest.emoji}</span>
+                    <h3 class="text-lg font-semibold text-white">{interest.title}</h3>
+                </div>
+
+                <p class="text-gray-400 text-sm mb-3">
+                    {interest.description}
+                </p>
+
+                {interest.backstory && (
+                    <p class="text-gray-500 text-xs italic mb-4 border-l-2 border-primary/30 pl-3">
+                        {interest.backstory}
+                    </p>
+                )}
+
+                {interest.details && (
+                    <ul class="space-y-1.5 text-sm">
+                        {interest.details.map(detail => (
+                            <li class="flex items-start gap-2 text-gray-400">
+                                <span class="text-primary mt-0.5 shrink-0">-</span>
+                                <span>{detail}</span>
+                            </li>
+                        ))}
+                    </ul>
+                )}
+
+            </div>
+
+        ))}
+
+    </div>
+
+</div>

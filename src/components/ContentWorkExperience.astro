@@ -1,0 +1,73 @@
+---
+interface WorkExperience {
+    role: string;
+    company: string;
+    period: string;
+    description: string;
+    lesson: string;
+};
+
+const experiences: WorkExperience[] = [{
+    role: 'Senior Software Engineer',
+    company: 'Open Government Products',
+    period: 'Aug 2025 — Present',
+    description: 'Delivering recruitment excellence for Singapore\'s public service.',
+    lesson: 'Impact ≠ valuation. Scale can mean society.'
+}, {
+    role: 'Head of Engineering',
+    company: 'Kaidee (Carro)',
+    period: 'Jan 2023 — Aug 2025',
+    description: 'Led engineering for Thailand\'s marketplace ecosystem. Built & scaled AI-powered hiring features.',
+    lesson: 'DX is a force multiplier.'
+}, {
+    role: 'CTO & Co-Founder',
+    company: 'RateS',
+    period: 'May 2019 — Jun 2023',
+    description: 'Series A startup. Social commerce, focusing on T2/T3 cities in Indonesia. Acquired 2023.',
+    lesson: 'Speed is important. Sustainability matters more.'
+}, {
+    role: 'CTO & Co-Founder',
+    company: 'RateX',
+    period: 'Apr 2016 — Jun 2023',
+    description: 'Series A startup. Chrome extension for FX payments & Coupon Codes for Singaporeans. Pivoted to RateS later on.',
+    lesson: 'Annoying problems require creative solutions.'
+}];
+---
+
+<div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+
+        {experiences.map(exp =>
+
+            <div class="flex flex-col justify-between border border-gray-700 rounded-lg p-4 bg-black">
+
+                <div>
+                    <h3 class="text-xl font-semibold text-white mb-1">
+                        {exp.company}
+                    </h3>
+
+                    <p class="text-sm text-primary mb-1">
+                        {exp.role}
+                    </p>
+
+                    <p class="text-xs text-gray-500 mb-3">
+                        {exp.period}
+                    </p>
+
+                    <p class="text-gray-400 text-sm">
+                        {exp.description}
+                    </p>
+                </div>
+
+                <p class="text-xs text-gray-500 mt-4 italic border-t border-gray-800 pt-3">
+                    {exp.lesson}
+                </p>
+
+            </div>
+
+        )}
+
+    </div>
+
+</div>

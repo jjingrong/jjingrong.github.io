@@ -1,0 +1,52 @@
+---
+interface TechItem {
+    name: string;
+};
+
+interface TechCategory {
+    label: string;
+    items: TechItem[];
+};
+
+const categories: TechCategory[] = [{
+    label: 'Frontend',
+    items: [
+        { name: 'React' },
+        { name: 'Next.js' },
+        { name: 'Astro' },
+        { name: 'TypeScript' },
+        { name: 'Tailwind CSS' },
+        { name: 'React Native' }
+    ]
+}, {
+    label: 'Backend, Data & Cloud',
+    items: [
+        { name: 'Node.js' },
+        { name: 'NestJS' },
+        { name: 'PostgreSQL' },
+        { name: 'AWS' },
+        { name: 'Firebase' }
+    ]
+}];
+---
+
+<div>
+
+    {categories.map(category => (
+        <div class="mb-8">
+
+            <h3 class="text-sm font-semibold text-primary mb-3 uppercase tracking-wider">
+                {category.label}
+            </h3>
+
+            <div class="flex flex-wrap gap-2">
+                {category.items.map(item => (
+                    <span class="px-3 py-1.5 text-sm border border-gray-600 rounded-lg text-gray-100 hover:border-primary hover:text-primary transition-colors duration-150">
+                        {item.name}
+                    </span>
+                ))}
+            </div>
+
+        </div>
+    ))}
+</div>
