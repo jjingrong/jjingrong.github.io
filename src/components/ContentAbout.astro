@@ -1,0 +1,97 @@
+---
+import { Code } from 'astro:components';
+
+const code = `interface Developer {
+    name: string;
+    skills: string[];
+    interests: string[];
+};
+
+interface TechStack {
+    frontend: string[];
+    backend: string[];
+};
+
+type ContactType = 'github' | 'linkedIn';
+
+const techStack: TechStack = {
+    frontend: [
+        'React',
+        'Next.js',
+        'Astro',
+        'TypeScript',
+        'Tailwind CSS',
+        'React Native'
+    ],
+    backend: [
+        'Node.js',
+        'NestJS',
+        'PostgreSQL',
+        'AWS',
+        'Firebase'
+    ]
+};
+
+// Developer profile
+const me: Developer = {
+    name: 'Jing Rong Lim',
+    skills: [
+        ...techStack.frontend,
+        ...techStack.backend
+    ],
+    interests: [
+        'Startups',
+        'Innovation',
+        'A.I',
+        'Fantasy Premier League',
+        'Public Good'
+    ]
+};
+
+// Contact function
+const contact = (type: ContactType): string => {
+    switch (type) {
+        case 'github':
+            return 'https://github.com/jjingrong';
+        case 'linkedIn':
+            return 'https://linkedin.com/in/limjingrong';
+        default:
+            return 'Send a carrier pigeon.';
+    }
+};
+
+// TODO: Touch grass occasionally
+
+`;
+---
+
+<Code
+    code={code}
+    lang="js"
+    wrap={true}
+/>
+
+<style is:global>
+
+    /* Custom styling for code block line numbers */
+    pre.astro-code {
+        @apply bg-transparent !important;
+    }
+
+    pre.astro-code code {
+        @apply block;
+        counter-reset: step;
+        counter-increment: step 0;
+    }
+
+    pre.astro-code code .line {
+        @apply relative;
+    }
+
+    pre.astro-code code .line::before {
+        content: counter(step);
+        counter-increment: step;
+        @apply text-gray-600 pr-2;
+    }
+
+</style>
