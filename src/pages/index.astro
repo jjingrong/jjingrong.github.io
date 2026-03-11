@@ -7,8 +7,9 @@ import Contact from '../components/Contact.astro';
 import ContentLink from '../components/ContentLink.astro';
 import ContentCode from '../components/ContentAbout.astro';
 import ContentWorkExperience from '../components/ContentWorkExperience.astro';
-import ContentStack from '../components/ContentStack.astro';
+// import ContentStack from '../components/ContentStack.astro';
 import ContentReadme from '../components/ContentReadme.astro';
+import ContentInterests from '../components/ContentInterests.astro';
 ---
 
 <Layout>
@@ -79,7 +80,7 @@ import ContentReadme from '../components/ContentReadme.astro';
 
                         <ContentLink
                             contentId="tab3"
-                            contentName="stack.md"
+                            contentName="interests.json"
                         />
 
                         <ContentLink
@@ -105,11 +106,11 @@ import ContentReadme from '../components/ContentReadme.astro';
                         </div>
                         <!-- End: Work Experience content -->
 
-                        <!-- Start: Stack content -->
+                        <!-- Start: Interests content -->
                         <div id="content3" class="tab-content">
-                            <ContentStack />
+                            <ContentInterests />
                         </div>
-                        <!-- End: Stack content -->
+                        <!-- End: Interests content -->
 
                         <!-- Start: README content -->
                         <div id="content4" class="tab-content">
